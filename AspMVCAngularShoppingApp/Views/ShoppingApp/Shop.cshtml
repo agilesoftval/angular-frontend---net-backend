@@ -1,0 +1,24 @@
+﻿<div ng-controller="ShoppingCtrl as products">
+    <div class="col-sm-4 col-lg-4 col-md-4" ng-repeat="prod in products.product">
+        <div class="thumbnail">
+            <img ng-src="prod.ProductImage.ImageUrl" alt="{{prod.ProductImage.ImageUrl}}">
+            <div class="caption">
+                <h4 class="pull-right">${{prod.Price}}</h4>
+                <h4>
+                    <a ng-href="products/{{prod.ProductId}}">{{prod.ProductName}}</a>
+                </h4>
+                <p>{{prod.ProductDescription}}</p>
+            </div>
+            <div class="ratings">
+                <p class="pull-right">{{prod.ProductRating}} reviews</p>
+                <p>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
